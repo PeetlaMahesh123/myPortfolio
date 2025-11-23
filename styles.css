@@ -419,13 +419,24 @@ section {
 .about-content {
     max-width: 900px;
     margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.about-text {
+    text-align: justify;
+    text-justify: inter-word;
+    margin-bottom: 2rem;
 }
 
 .about-text p {
     font-size: 1.1rem;
     margin-bottom: 1.5rem;
     color: var(--text-light);
-    line-height: 1.8;
+    line-height: 1.9;
+    text-align: justify;
+    text-justify: inter-word;
+    max-width: 100%;
+    word-spacing: 0.1em;
 }
 
 .about-text pre {
@@ -856,6 +867,13 @@ section {
 
 .timeline-content p {
     color: var(--text-muted);
+    line-height: 1.8;
+    margin-bottom: 0.8rem;
+}
+
+.timeline-content p strong {
+    color: #60a5fa;
+    font-weight: 600;
 }
 
 .timeline-content h4 {
@@ -945,7 +963,7 @@ section {
 }
 
 .certificate-issuer {
-    color: #60a5fa;
+    color: #93c5fd;
     font-weight: 600;
     margin-bottom: 0.5rem;
 }
@@ -977,6 +995,42 @@ section {
 
 .certificate-link:hover {
     color: #93c5fd;
+}
+
+/* Participations Section */
+.participations {
+    background: linear-gradient(135deg, #0a1628 0%, #0f1b2e 50%, #1a2332 100%);
+    position: relative;
+}
+
+.participations::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(96, 165, 250, 0.08) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+/* Courses/Internships Section */
+.courses {
+    background: linear-gradient(135deg, #0a1628 0%, #0f1b2e 50%, #1a2332 100%);
+    position: relative;
+}
+
+.courses::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(96, 165, 250, 0.08) 0%, transparent 50%);
+    pointer-events: none;
 }
 
 /* Status Section */
