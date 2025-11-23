@@ -60,11 +60,11 @@ document.querySelectorAll('.skill-category').forEach(category => {
 window.addEventListener('scroll', () => {
     const navbar = document.querySelector('.navbar');
     if (window.scrollY > 50) {
-        navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-        navbar.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1)';
+        navbar.style.background = 'rgba(5, 11, 20, 0.98)';
+        navbar.style.boxShadow = '0 8px 32px 0 rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(59, 130, 246, 0.1)';
     } else {
-        navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-        navbar.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1)';
+        navbar.style.background = 'rgba(5, 11, 20, 0.95)';
+        navbar.style.boxShadow = '0 8px 32px 0 rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(59, 130, 246, 0.1)';
     }
 });
 
