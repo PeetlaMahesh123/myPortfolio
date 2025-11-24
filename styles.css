@@ -116,7 +116,7 @@ body::before {
 
 .nav-menu a {
     text-decoration: none;
-    color: #cbd5e1;
+    color: #a855f7;
     font-weight: 600;
     transition: all 0.3s;
     position: relative;
@@ -130,14 +130,14 @@ body::before {
     left: 0;
     width: 0;
     height: 2px;
-    background: linear-gradient(135deg, #3b82f6 0%, #60a5fa 50%, #93c5fd 100%);
+    background: linear-gradient(135deg, #9333ea 0%, #a855f7 50%, #c084fc 100%);
     transition: width 0.3s;
-    box-shadow: 0 0 10px rgba(59, 130, 246, 0.8);
+    box-shadow: 0 0 10px rgba(168, 85, 247, 0.8);
 }
 
 .nav-menu a:hover {
-    color: #93c5fd;
-    text-shadow: 0 0 10px rgba(59, 130, 246, 0.6);
+    color: #c084fc;
+    text-shadow: 0 0 10px rgba(168, 85, 247, 0.6);
 }
 
 .nav-menu a:hover::after {
@@ -259,6 +259,15 @@ body::before {
     margin-bottom: 2rem;
     opacity: 0.8;
     line-height: 1.8;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.hero-description span {
+    display: block;
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 .hero-buttons {
@@ -398,6 +407,12 @@ section {
     background: linear-gradient(135deg, #3b82f6 0%, #60a5fa 50%, #93c5fd 100%);
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+}
+
+/* Consistent paragraph alignment similar to About section */
+section p {
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 /* About Section */
@@ -759,6 +774,24 @@ section {
         0 0 25px rgba(254, 207, 239, 0.5);
 }
 
+/* Projects Section */
+.projects {
+    background: linear-gradient(135deg, #0a1628 0%, #0f1b2e 50%, #1a2332 100%);
+    position: relative;
+}
+
+.projects::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(96, 165, 250, 0.08) 0%, transparent 50%);
+    pointer-events: none;
+}
+
 /* Education Section */
 .education {
     background: linear-gradient(135deg, #0a1628 0%, #0f1b2e 100%);
@@ -827,6 +860,11 @@ section {
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     position: relative;
     overflow: hidden;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
 }
 
 .timeline-content::before {
@@ -867,13 +905,16 @@ section {
 
 .timeline-content p {
     color: var(--text-muted);
-    line-height: 1.8;
+    line-height: 1.9;
     margin-bottom: 0.8rem;
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 .timeline-content p strong {
     color: #60a5fa;
     font-weight: 600;
+    margin-right: 0.5rem;
 }
 
 .timeline-content h4 {
@@ -907,10 +948,26 @@ section {
     box-shadow: 
         0 8px 32px 0 rgba(0, 0, 0, 0.5),
         inset 0 1px 0 rgba(59, 130, 246, 0.1);
-    text-align: center;
+    text-align: left;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.certificate-card h3,
+.certificate-card p,
+.certificate-card a {
+    width: 100%;
+    text-align: left;
+}
+
+.certificate-card p,
+.certificate-card span {
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 .certificate-card::before {
@@ -946,7 +1003,7 @@ section {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     transition: all 0.3s ease;
     display: inline-block;
     filter: drop-shadow(0 0 15px rgba(59, 130, 246, 0.6));
@@ -981,10 +1038,29 @@ section {
     color: var(--text-light);
     margin-bottom: 1rem;
     line-height: 1.6;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.certificate-description span {
+    display: block;
+    margin-bottom: 0.4rem;
+    text-align: justify;
+}
+
+.certificate-description span:last-child {
+    margin-bottom: 0;
+}
+
+.aligned-list span {
+    display: block;
+    width: 100%;
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 .certificate-link {
-    color: #60a5fa;
+    color: #f97316;
     text-decoration: none;
     font-weight: 600;
     display: inline-flex;
@@ -994,7 +1070,7 @@ section {
 }
 
 .certificate-link:hover {
-    color: #93c5fd;
+    color: #fb923c;
 }
 
 /* Participations Section */
@@ -1054,10 +1130,22 @@ section {
     box-shadow: 
         0 8px 32px 0 rgba(0, 0, 0, 0.5),
         inset 0 1px 0 rgba(59, 130, 246, 0.1);
-    text-align: center;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.status-card > * {
+    width: 100%;
+    text-align: left;
 }
 
 .status-card::after {
@@ -1092,7 +1180,7 @@ section {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     transition: all 0.3s ease;
     display: inline-block;
     filter: drop-shadow(0 0 15px rgba(59, 130, 246, 0.6));
@@ -1164,6 +1252,16 @@ section {
     gap: 1rem;
     margin-bottom: 2rem;
     align-items: flex-start;
+    text-align: left;
+    width: 100%;
+}
+
+.contact-item > div,
+.contact-item h4,
+.contact-item p,
+.contact-item a {
+    width: 100%;
+    text-align: left;
 }
 
 .contact-item i {
