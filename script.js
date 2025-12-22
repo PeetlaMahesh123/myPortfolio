@@ -68,31 +68,6 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Contact Form Handler
-const contactForm = document.getElementById('contactForm');
-if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        
-        // Get form values
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const subject = document.getElementById('subject').value;
-        const message = document.getElementById('message').value;
-        
-        // Create mailto link (you can replace this with actual form submission)
-        const mailtoLink = `mailto:your.email@example.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
-        
-        // Open email client
-        window.location.href = mailtoLink;
-        
-        // Show success message
-        alert('Thank you for your message! Your email client should open shortly.');
-        
-        // Reset form
-        contactForm.reset();
-    });
-}
 
 // Add active class to current section in navigation
 const sections = document.querySelectorAll('section[id]');
