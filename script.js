@@ -111,3 +111,4 @@ document.querySelectorAll('section').forEach(section => {
     fadeInObserver.observe(section);
 });
 
+
