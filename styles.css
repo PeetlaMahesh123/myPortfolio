@@ -465,7 +465,7 @@ section p {
 
 .about-info {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: 1fr;
     gap: 2rem;
     margin-top: 3rem;
 }
@@ -938,9 +938,15 @@ section p {
     gap: 2rem;
 }
 
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
 .certificate-card {
     background: rgba(15, 27, 46, 0.5);
-    padding: 2.5rem;
+    padding: 2rem;
     border-radius: 20px;
     backdrop-filter: blur(20px) saturate(150%);
     -webkit-backdrop-filter: blur(20px) saturate(150%);
@@ -954,7 +960,7 @@ section p {
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    gap: 0.75rem;
+    gap: 0.4rem;
 }
 
 .certificate-card h3,
@@ -967,7 +973,8 @@ section p {
 .certificate-card p,
 .certificate-card span {
     text-align: justify;
-    text-justify: inter-word;
+    text-align-last: left;
+    word-spacing: normal;
 }
 
 .certificate-card::before {
@@ -1016,13 +1023,13 @@ section p {
 
 .certificate-card h3 {
     color: var(--text-dark);
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.2rem;
 }
 
 .certificate-issuer {
     color: #93c5fd;
     font-weight: 600;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.2rem;
 }
 
 .certificate-date {
@@ -1036,7 +1043,7 @@ section p {
 
 .certificate-description {
     color: var(--text-light);
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     line-height: 1.6;
     text-align: justify;
     text-justify: inter-word;
