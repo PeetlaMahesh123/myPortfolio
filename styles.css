@@ -1232,7 +1232,6 @@ section p {
     color: var(--white);
 }
 
-
 /* Contact Section */
 .contact-content {
     display: grid;
@@ -1363,6 +1362,28 @@ section p {
     box-shadow: 
         0 8px 32px 0 rgba(0, 0, 0, 0.5),
         inset 0 1px 0 rgba(59, 130, 246, 0.1);
+}
+
+.contact-form p {
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    text-align: left;
+}
+
+.contact-form p:last-child {
+    margin-bottom: 0;
+}
+
+.contact-form a {
+    color: #60a5fa;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-weight: 600;
+}
+
+.contact-form a:hover {
+    color: #93c5fd;
 }
 
 .form-group {
