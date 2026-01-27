@@ -961,6 +961,9 @@ section p {
     display: flex;
     flex-direction: column;
     gap: 0.4rem;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
 }
 
 .certificate-card h3,
@@ -1078,6 +1081,33 @@ section p {
 
 .certificate-link:hover {
     color: #fb923c;
+}
+
+/* Project Link Styling */
+.project-link {
+    color: #ff8c42;
+    text-decoration: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: auto;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 140, 66, 0.2);
+    transition: all 0.3s ease;
+}
+
+.certificate-card:hover .project-link {
+    color: #ffb366;
+    gap: 0.8rem;
+}
+
+.project-link i {
+    transition: transform 0.3s ease;
+}
+
+.certificate-card:hover .project-link i {
+    transform: translateX(3px);
 }
 
 /* Participations Section */
