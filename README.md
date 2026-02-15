@@ -3,6 +3,7 @@
 A modern, responsive **portfolio website** designed to showcase personal details, skills, education, projects, certifications, and contact information. This website serves as a digital resume to present your professional profile to recruiters and hiring managers.
 
 ---
+<img width="1894" height="860" alt="image" src="https://github.com/user-attachments/assets/6720c3d9-7d55-41bf-bc84-657f33a78264" />
 
 ## 🖥️ Project Overview
 
