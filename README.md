@@ -9,7 +9,7 @@ A modern, responsive **portfolio website** designed to showcase personal details
 The Portfolio Website highlights your background, technical skills, academic qualifications, and projects in a structured and visually appealing way. It is designed to work seamlessly across all devices and provides an easy way for visitors to learn more about you and get in touch.
 
 ---
-##  Portfolio Link:  https://peetlamahesh123.github.io/myPortfolio/
+  Portfolio Link:  https://peetlamahesh123.github.io/myPortfolio/
 ## ✨ Features
 
 * 📱 Fully responsive design (mobile, tablet, desktop)
