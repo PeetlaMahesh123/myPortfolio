@@ -4,7 +4,9 @@ A modern, responsive **portfolio website** designed to showcase personal details
 
 ---
 <img width="1894" height="860" alt="image" src="https://github.com/user-attachments/assets/6720c3d9-7d55-41bf-bc84-657f33a78264" />
+<img width="1536" height="870" alt="image" src="https://github.com/user-attachments/assets/aa62f8bf-6c89-443f-b608-0be4745b4b69" />
 
+---
 ## 🖥️ Project Overview
 
 The Portfolio Website highlights your background, technical skills, academic qualifications, and projects in a structured and visually appealing way. It is designed to work seamlessly across all devices and provides an easy way for visitors to learn more about you and get in touch.
