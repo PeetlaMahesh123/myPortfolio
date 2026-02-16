@@ -26,29 +26,81 @@ The Portfolio Website highlights your background, technical skills, academic qua
 * 🎨 Clean and professional UI
 
 ---
+---
 
-## 🛠️ Technologies Used
+# 🤖 AI-Powered Portfolio Assistant
 
-* **HTML5** – Structure of the website
-* **CSS3** – Styling and responsiveness
-* **JavaScript** – Interactivity and dynamic content
+## 🧠 Interactive AI Resume Assistant
 
+This portfolio includes a **custom-built AI Assistant** integrated directly into the website.
+
+The assistant intelligently analyzes my portfolio content and provides real-time answers to user queries such as:
+
+- What technologies does Mahesh know?
+- What backend experience does he have?
+- Which projects has he built?
+- What is his educational background?
+- Is he currently open to opportunities?
+
+It functions as an interactive digital resume, allowing visitors and recruiters to engage with my profile dynamically.
+
+---
+
+## ⚙️ How It Works
+
+- Custom-defined system prompt  
+- Context-aware response generation  
+- Answers strictly based on portfolio data  
+- Structured and professional responses  
+- Real-time conversational interface  
+
+This demonstrates practical implementation of:
+
+- AI API Integration  
+- Prompt Engineering  
+- Backend API Handling  
+- Conversational UI Development  
+
+---
+
+## ⚠️ API Usage Note
+
+The AI Assistant relies on an external AI API service.
+
+You may occasionally see the message:
+
+> "Exceeded Quota"
+
+This occurs due to API usage limits or rate restrictions set by the AI service provider.
+
+The assistant remains fully functional, but responses may be temporarily unavailable if the quota limit is reached.
+
+---
+
+## 🚀 Technical Stack
+
+- HTML5, CSS3, JavaScript (Frontend)
+- Node.js / Express (Backend – if applicable)
+- AI API Integration (LLM-based system prompt)
+- REST API Communication
+- Secure API Key Handling
+
+---
+
+## 💡 Why This Feature Matters
+
+This feature transforms the portfolio from a static website into an:
+
+- Interactive Resume  
+- AI-Powered Personal Assistant  
+- Real-World AI Integration Project  
+
+It showcases my ability to integrate modern AI technologies into practical full-stack applications.
 ---
 
 ## 📁 Project Structure
 
-```
-Portfolio-Website/
-│
-├── index.html        # Main webpage
-├── styles.css        # Styling file
-├── script.js         # JavaScript functionality
-├── assets/           # Images and icons
-└── README.md         # Project documentation
-```
-
 ---
-
 ## ▶️ How to Run the Project
 
 1. Download or clone the repository:
