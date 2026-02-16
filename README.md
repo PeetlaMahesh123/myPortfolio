@@ -26,7 +26,6 @@ The Portfolio Website highlights your background, technical skills, academic qua
 * 🎨 Clean and professional UI
 
 ---
----
 
 # 🤖 AI-Powered Portfolio Assistant
 
