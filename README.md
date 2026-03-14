@@ -15,6 +15,17 @@ A modern, responsive **portfolio website** designed to showcase personal details
 The Portfolio Website highlights your background, technical skills, academic qualifications, and projects in a structured and visually appealing way. It is designed to work seamlessly across all devices and provides an easy way for visitors to learn more about you and get in touch.
 
 ---
+## ✨ Features
+
+* 📱 Fully responsive design (mobile, tablet, desktop)
+* 🧑 Personal introduction and profile section
+* 🧠 Skills and expertise showcase
+* 🎓 Education timeline
+* 🏆 Certificates and achievements
+* 💼 Projects section
+* 📊 Current status / availability
+* 📞 Contact information and social links
+* 🎨 Clean and professional UI
 
 ---
 
