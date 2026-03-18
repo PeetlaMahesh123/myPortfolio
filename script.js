@@ -291,4 +291,39 @@ document.addEventListener("click", async function (e) {
   }
 });
 
+// ============================================
+// NAVBAR SCROLL EFFECT & PARALLAX
+// ============================================
+
+// Navbar scroll effect for enhanced glow
+const navbar = document.querySelector('.navbar');
+let lastScroll = 0;
+
+window.addEventListener('scroll', () => {
+    const currentScroll = window.pageYOffset;
+    
+    // Add scroll effect class when scrolled
+    if (currentScroll > 50) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+    
+    lastScroll = currentScroll;
+});
+
+// Add subtle parallax effect to particles on mouse move
+document.addEventListener('mousemove', (e) => {
+    const particles = document.querySelectorAll('.navbar-particle');
+    const mouseX = e.clientX / window.innerWidth;
+    const mouseY = e.clientY / window.innerHeight;
+    
+    particles.forEach((particle, index) => {
+        const speed = (index + 1) * 2;
+        const x = mouseX * speed;
+        const y = mouseY * speed;
+        particle.style.transform = `translate(${x}px, ${y}px)`;
+    });
+});
+
 
