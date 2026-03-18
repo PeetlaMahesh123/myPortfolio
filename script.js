@@ -1,10 +1,73 @@
-// Mobile Navigation Toggle
+// ============================================
+// THEME SELECTOR
+// ============================================
+const themeSelector = document.getElementById('themeSelector');
+const themeCurrent = document.getElementById('themeCurrent');
+const themeDropdown = document.getElementById('themeDropdown');
+const themeOptions = document.querySelectorAll('.theme-option');
+const html = document.documentElement;
+
+// Available themes
+const themes = {
+    dark: { icon: '🌑', name: 'Dark' },
+    light: { icon: '☀️', name: 'Light' },
+    ocean: { icon: '🌊', name: 'Ocean' },
+    forest: { icon: '🌲', name: 'Forest' },
+    sunset: { icon: '🌅', name: 'Sunset' },
+    midnight: { icon: '🌙', name: 'Midnight' }
+};
+
+// Check for saved theme preference
+const savedTheme = localStorage.getItem('theme') || 'dark';
+html.setAttribute('data-theme', savedTheme);
+updateThemeSelector(savedTheme);
+
+// Toggle dropdown
+themeCurrent.addEventListener('click', () => {
+    themeSelector.classList.toggle('active');
+});
+
+// Close dropdown when clicking outside
+document.addEventListener('click', (e) => {
+    if (!themeSelector.contains(e.target)) {
+        themeSelector.classList.remove('active');
+    }
+});
+
+// Theme selection
+themeOptions.forEach(option => {
+    option.addEventListener('click', () => {
+        const selectedTheme = option.getAttribute('data-theme');
+        html.setAttribute('data-theme', selectedTheme);
+        localStorage.setItem('theme', selectedTheme);
+        updateThemeSelector(selectedTheme);
+        themeSelector.classList.remove('active');
+    });
+});
+
+function updateThemeSelector(currentTheme) {
+    // Update active state in dropdown
+    themeOptions.forEach(option => {
+        option.classList.toggle('active', option.getAttribute('data-theme') === currentTheme);
+    });
+}
+
+// ============================================
+// MOBILE NAVIGATION
+// ============================================
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
 
 hamburger.addEventListener('click', () => {
     navMenu.classList.toggle('active');
     hamburger.classList.toggle('active');
+    
+    // Prevent body scroll when menu is open
+    if (navMenu.classList.contains('active')) {
+        document.body.style.overflow = 'hidden';
+    } else {
+        document.body.style.overflow = '';
+    }
 });
 
 // Close mobile menu when clicking on a link
@@ -12,7 +75,17 @@ document.querySelectorAll('.nav-menu a').forEach(link => {
     link.addEventListener('click', () => {
         navMenu.classList.remove('active');
         hamburger.classList.remove('active');
+        document.body.style.overflow = '';
     });
+});
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', (e) => {
+    if (!hamburger.contains(e.target) && !navMenu.contains(e.target) && navMenu.classList.contains('active')) {
+        navMenu.classList.remove('active');
+        hamburger.classList.remove('active');
+        document.body.style.overflow = '';
+    }
 });
 
 // Smooth scroll for navigation links
@@ -56,15 +129,25 @@ document.querySelectorAll('.skill-category').forEach(category => {
     observer.observe(category);
 });
 
-// Navbar background on scroll
+// Navbar background on scroll - uses CSS variables for theme compatibility
 window.addEventListener('scroll', () => {
     const navbar = document.querySelector('.navbar');
+    const html = document.documentElement;
+    const currentTheme = html.getAttribute('data-theme');
+    
     if (window.scrollY > 50) {
-        navbar.style.background = 'rgba(5, 11, 20, 0.98)';
-        navbar.style.boxShadow = '0 8px 32px 0 rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(59, 130, 246, 0.1)';
+        if (currentTheme === 'light') {
+            navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+            navbar.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
+        } else {
+            // For dark, ocean, forest, sunset, midnight themes
+            navbar.style.background = 'rgba(15, 15, 26, 0.98)';
+            navbar.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.5)';
+        }
     } else {
-        navbar.style.background = 'rgba(5, 11, 20, 0.95)';
-        navbar.style.boxShadow = '0 8px 32px 0 rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(59, 130, 246, 0.1)';
+        // Reset to CSS variable values
+        navbar.style.background = '';
+        navbar.style.boxShadow = '';
     }
 });
 
