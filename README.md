@@ -6,6 +6,8 @@ A modern, responsive **portfolio website** designed to showcase personal details
  Portfolio Link:  https://peetlamahesh123.github.io/myPortfolio/
  
 ---
+## 📸 Screenshots
+
 <img width="1901" height="847" alt="image" src="https://github.com/user-attachments/assets/e9cb8e81-3583-4563-a328-5057877f6aec" />
 
 <img width="1536" height="870" alt="image" src="https://github.com/user-attachments/assets/aa62f8bf-6c89-443f-b608-0be4745b4b69" />
