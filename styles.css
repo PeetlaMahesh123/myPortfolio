@@ -1737,10 +1737,130 @@ section:first-of-type::before {
     gap: 1.5rem;
 }
 
+/* Projects Section - Responsive Design */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1rem;
+}
+
+/* Responsive Projects Grid */
+@media (max-width: 1200px) {
+    .projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 0.9rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 0.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 0.7rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 0.6rem;
+    }
+}
+
+/* Project Cards Responsive */
+@media (max-width: 1200px) {
+    .certificate-card {
+        padding: 1.3rem;
+        border-radius: 14px;
+    }
+    
+    .certificate-card h3 {
+        font-size: 1rem;
+        line-height: 1.2;
+    }
+    
+    .certificate-description {
+        font-size: 0.85rem;
+        -webkit-line-clamp: 4;
+    }
+}
+
+@media (max-width: 992px) {
+    .certificate-card {
+        padding: 1.2rem;
+        border-radius: 12px;
+    }
+    
+    .certificate-card h3 {
+        font-size: 0.95rem;
+        line-height: 1.1;
+    }
+    
+    .certificate-description {
+        font-size: 0.8rem;
+        -webkit-line-clamp: 3;
+    }
+}
+
+@media (max-width: 768px) {
+    .certificate-card {
+        padding: 1rem;
+        border-radius: 10px;
+    }
+    
+    .certificate-card h3 {
+        font-size: 0.9rem;
+        line-height: 1.1;
+    }
+    
+    .certificate-description {
+        font-size: 0.75rem;
+        -webkit-line-clamp: 3;
+    }
+    
+    .certificate-icon {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .certificate-card {
+        padding: 0.8rem;
+        border-radius: 8px;
+    }
+    
+    .certificate-card h3 {
+        font-size: 0.85rem;
+        line-height: 1.1;
+    }
+    
+    .certificate-description {
+        font-size: 0.7rem;
+        -webkit-line-clamp: 2;
+    }
+    
+    .certificate-icon {
+        font-size: 1.6rem;
+    }
+    
+    .project-image {
+        height: 120px;
+    }
+    
+    .project-skills {
+        gap: 0.2rem;
+    }
+    
+    .skill-badge {
+        padding: 0.1rem 0.3rem;
+        font-size: 0.5rem;
+    }
 }
 
 .certificate-card {
