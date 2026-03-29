@@ -274,7 +274,7 @@ document.addEventListener("click", async function (e) {
     input.value = "";
 
     try {
-      const response = await fetch("https://myportfolio-backend-connection-production.up.railway.app/chat", {
+      const response = await fetch("https://myportfolio-backend-connection.onrender.com/chat", {
   method: "POST",
   headers: {
     "Content-Type": "application/json"

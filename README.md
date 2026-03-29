@@ -1,12 +1,15 @@
-# 🌐 Personal Portfolio Website (Included Custom AI Assistant)
 
+# 🌐 Personal Portfolio Website (Included Custom AI Assistant)
 A modern, responsive **portfolio website** designed to showcase personal details, skills, education, projects, certifications, and contact information. This website serves as a digital resume to present your professional profile to recruiters and hiring managers.
 
 ---
  Portfolio Link:  https://peetlamahesh123.github.io/myPortfolio/
  
 ---
-<img width="1894" height="860" alt="image" src="https://github.com/user-attachments/assets/6720c3d9-7d55-41bf-bc84-657f33a78264" />
+## 📸 Application Screenshots
+
+<img width="1901" height="847" alt="image" src="https://github.com/user-attachments/assets/e9cb8e81-3583-4563-a328-5057877f6aec" />
+
 <img width="1536" height="870" alt="image" src="https://github.com/user-attachments/assets/aa62f8bf-6c89-443f-b608-0be4745b4b69" />
 
 ---
