@@ -1739,81 +1739,74 @@ section:first-of-type::before {
 
 .projects-grid {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
 }
 
 .certificate-card {
     background: var(--bg-card);
     padding: 1.5rem;
-    border-radius: 24px;
+    border-radius: 16px;
     border: 1px solid var(--border-color);
     box-shadow: var(--shadow-sm);
-    text-align: left;
+    text-decoration: none;
+    color: var(--text-primary);
     transition: all 0.3s ease;
-    position: relative;
     display: flex;
     flex-direction: column;
-    gap: 0.75rem;
-    cursor: pointer;
-    text-decoration: none;
-    color: inherit;
-    overflow: hidden;
+    height: 100%;
 }
 
 .certificate-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-4px);
     box-shadow: var(--shadow-md);
     border-color: var(--border-hover);
 }
 
 .certificate-icon {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: var(--primary-color);
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
     transition: all 0.3s ease;
-    flex-shrink: 0;
 }
 
 .certificate-card:hover .certificate-icon {
-    transform: scale(1.1) rotate(5deg);
     color: var(--secondary-color);
+    transform: scale(1.1);
 }
 
 .certificate-card h3 {
     color: var(--text-primary);
-    margin-bottom: 0.25rem;
-    font-size: 1.05rem;
-    font-weight: 600;
-    line-height: 1.4;
-    word-wrap: break-word;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    line-height: 1.3;
 }
 
 .certificate-issuer {
     color: var(--primary-color);
-    font-weight: 500;
+    font-weight: 600;
     font-size: 0.85rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
 }
 
 .certificate-description {
     color: var(--text-secondary);
-    margin-bottom: 0.5rem;
-    line-height: 1.5;
-    font-size: 0.85rem;
-    text-align: left;
-    letter-spacing: normal;
-    word-spacing: 0;
-    word-wrap: break-word;
-    display: -webkit-box;
-    -webkit-line-clamp: 4;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+    flex-grow: 1;
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    display: -webkit-box;
+    line-clamp: 3;
 }
 
-.certificate-link {
-    color: var(--secondary-color);
-    text-decoration: none;
+.tech-stack-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin: 0.75rem 0;
     font-weight: 500;
     display: inline-flex;
     align-items: center;
@@ -1929,11 +1922,12 @@ section:first-of-type::before {
     border: 1px solid rgba(239, 68, 68, 0.3);
 }
 
-/* Contact Section - Developer Theme */
+/* Contact Section - Enhanced Layout */
 .contact-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    gap: 3rem;
+    align-items: start;
 }
 
 .contact-info h3,
@@ -1941,6 +1935,119 @@ section:first-of-type::before {
     margin-bottom: 2rem;
     color: var(--text-primary);
     font-size: 1.5rem;
+    text-align: center;
+}
+
+.logos-container {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.contact-link-item {
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.contact-logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+/* LinkedIn Logo - Blue Background */
+.linkedin-logo {
+    background: linear-gradient(135deg, #0077b5 0%, #005885 100%);
+    border: 2px solid #0077b5;
+}
+
+/* LeetCode Logo - Dark Background */
+.leetcode-logo {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    border: 2px solid #1a1a1a;
+    color: #ffa500;
+}
+
+/* Gmail Logo - Red Background */
+.gmail-logo {
+    background: linear-gradient(135deg, #ea4335 0%, #c5221f 100%);
+    border: 2px solid #ea4335;
+}
+
+/* Phone Logo - Green Background */
+.phone-logo {
+    background: linear-gradient(135deg, #25d366 0%, #1da1f2 100%);
+    border: 2px solid #25d366;
+}
+
+/* Twitter Logo - Light Blue */
+.twitter-logo {
+    background: linear-gradient(135deg, #1da1f2 0%, #0d8bd9 100%);
+    border: 2px solid #1da1f2;
+}
+
+/* Instagram Logo - Pink Gradient */
+.instagram-logo {
+    background: linear-gradient(135deg, #e4405f 0%, #c13584 100%);
+    border: 2px solid #e4405f;
+}
+
+/* Discord Logo - Purple Gradient */
+.discord-logo {
+    background: linear-gradient(135deg, #7289da 0%, #5865f2 100%);
+    border: 2px solid #7289da;
+}
+
+/* YouTube Logo - Red Gradient */
+.youtube-logo {
+    background: linear-gradient(135deg, #ff0000 0%, #cc0000 100%);
+    border: 2px solid #ff0000;
+}
+
+/* Contact Note Section */
+.contact-note {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, var(--bg-card), var(--bg-tertiary));
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+}
+
+.contact-note p {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.contact-note p i {
+    color: var(--primary-color);
+    font-size: 1rem;
+    width: 20px;
+    text-align: center;
+}
+
+.contact-note strong {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.contact-link-item:hover .contact-logo {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .contact-item {
@@ -2021,31 +2128,252 @@ section:first-of-type::before {
     transform: translateY(-3px);
 }
 
+/* Contact Form - Responsive Design */
 .contact-form {
     background: var(--bg-card);
-    padding: 2rem;
-    border-radius: 20px;
+    padding: 1.5rem;
+    border-radius: 16px;
     border: 1px solid var(--border-color);
     box-shadow: var(--shadow-sm);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* Responsive Contact Form */
+@media (max-width: 768px) {
+    .contact-form {
+        padding: 1.2rem;
+        max-width: 100%;
+        margin: 0 1rem;
+    }
+    
+    .contact-form h3 {
+        font-size: 1.3rem;
+        margin-bottom: 1.2rem;
+    }
+    
+    .contact-form p {
+        font-size: 0.9rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .form-group {
+        margin-bottom: 1.2rem;
+    }
+    
+    .form-group input,
+    .form-group textarea {
+        padding: 0.8rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .form-group textarea {
+        min-height: 70px;
+    }
+    
+    .btn-primary {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .contact-form {
+        padding: 1rem;
+        margin: 0 0.5rem;
+    }
+    
+    .contact-form h3 {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+    
+    .contact-form p {
+        font-size: 0.85rem;
+        margin-bottom: 1.2rem;
+    }
+    
+    .form-group {
+        margin-bottom: 1rem;
+    }
+    
+    .form-group input,
+    .form-group textarea {
+        padding: 0.7rem 0.9rem;
+        font-size: 0.85rem;
+    }
+    
+    .form-group textarea {
+        min-height: 60px;
+    }
+    
+    .btn-primary {
+        padding: 0.7rem 1.2rem;
+        font-size: 0.85rem;
+    }
+}
+
+.contact-form::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, 
+        var(--primary-color) 0%, 
+        var(--secondary-color) 50%, 
+        var(--accent-color) 100%
+    );
+    animation: formBorderGlow 3s linear infinite;
+}
+
+.contact-form h3 {
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    position: relative;
+}
+
+.contact-form h3::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 2px;
+    background: var(--primary-color);
+    border-radius: 1px;
 }
 
 .contact-form p {
     color: var(--text-secondary);
-    margin-bottom: 0.75rem;
+    margin-bottom: 2rem;
     font-size: 1rem;
-    text-align: left;
-    letter-spacing: normal;
-    word-spacing: 0;
+    text-align: center;
+    line-height: 1.6;
 }
 
-.contact-form a {
-    color: var(--primary-color);
-    text-decoration: none;
-    font-weight: 500;
+.form-group {
+    margin-bottom: 1.5rem;
+    position: relative;
+    width: 100%;
 }
 
-.contact-form a:hover {
-    color: var(--secondary-color);
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 1rem 1.2rem;
+    background: var(--bg-primary);
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    color: var(--text-primary);
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+    background: var(--bg-card);
+    transform: translateY(-2px);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: var(--text-muted);
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.form-group input:focus::placeholder,
+.form-group textarea:focus::placeholder {
+    opacity: 0.3;
+    transform: translateY(-8px);
+}
+
+.form-group textarea {
+    min-height: 80px;
+    resize: vertical;
+    font-family: inherit;
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: var(--shadow-md);
+}
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        transparent, 
+        rgba(255, 255, 255, 0.2), 
+        transparent
+    );
+    transition: left 0.6s ease;
+}
+
+.btn-primary:hover::before {
+    left: 100%;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Form Animation */
+@keyframes formBorderGlow {
+    0% { 
+        background-position: 0% 50%;
+        transform: translateX(-100%);
+    }
+    50% { 
+        background-position: 100% 50%;
+        transform: translateX(0%);
+    }
+    100% { 
+        background-position: 200% 50%;
+        transform: translateX(100%);
+    }
 }
 
 /* Footer - Developer Theme */
@@ -2055,15 +2383,547 @@ section:first-of-type::before {
     text-align: center;
     padding: 2.5rem 0;
     border-top: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
 }
 
 .footer p {
-    margin: 0.5rem 0;
+    margin: 0;
     font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
 }
 
 .footer i {
     color: var(--accent-color);
+}
+
+/* Project Images */
+.project-image {
+    width: 100%;
+    height: 160px;
+    margin-bottom: 1rem;
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--bg-tertiary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.image-placeholder-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    font-weight: 600;
+    font-family: 'JetBrains Mono', monospace;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.7;
+    z-index: 1;
+}
+
+.project-image img:not([style*="display: none"]) + .image-placeholder-text {
+    display: none;
+}
+
+.certificate-card:hover .project-image img {
+    transform: scale(1.05);
+}
+
+/* Tech Stack Buttons - Smaller for Projects */
+.tech-stack-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin: 0.75rem 0;
+}
+
+.tech-btn {
+    padding: 0.3rem 0.6rem;
+    border-radius: 15px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    font-family: 'JetBrains Mono', monospace;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tech-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* React Button - Cyan Blue */
+.react-btn {
+    background: linear-gradient(135deg, #61dafb 0%, #21759b 100%);
+    color: white;
+    border: 1px solid #61dafb;
+}
+
+.react-btn:hover {
+    background: linear-gradient(135deg, #21759b 0%, #61dafb 100%);
+    box-shadow: 0 2px 8px rgba(97, 218, 251, 0.4);
+}
+
+/* TypeScript Button - Deep Blue */
+.typescript-btn {
+    background: linear-gradient(135deg, #3178c6 0%, #235a97 100%);
+    color: white;
+    border: 1px solid #3178c6;
+}
+
+.typescript-btn:hover {
+    background: linear-gradient(135deg, #235a97 0%, #3178c6 100%);
+    box-shadow: 0 2px 8px rgba(49, 120, 198, 0.4);
+}
+
+/* Supabase Button - Green */
+.supabase-btn {
+    background: linear-gradient(135deg, #3ecf8e 0%, #16a34a 100%);
+    color: white;
+    border: 1px solid #3ecf8e;
+}
+
+.supabase-btn:hover {
+    background: linear-gradient(135deg, #16a34a 0%, #3ecf8e 100%);
+    box-shadow: 0 2px 8px rgba(62, 207, 142, 0.4);
+}
+
+/* PostgreSQL Button - Dark Blue */
+.postgres-btn {
+    background: linear-gradient(135deg, #336791 0%, #2c5282 100%);
+    color: white;
+    border: 1px solid #336791;
+}
+
+.postgres-btn:hover {
+    background: linear-gradient(135deg, #2c5282 0%, #336791 100%);
+    box-shadow: 0 2px 8px rgba(51, 103, 145, 0.4);
+}
+
+/* Java Button - Orange Red */
+.java-btn {
+    background: linear-gradient(135deg, #f89820 0%, #e76f00 100%);
+    color: white;
+    border: 1px solid #f89820;
+}
+
+.java-btn:hover {
+    background: linear-gradient(135deg, #e76f00 0%, #f89820 100%);
+    box-shadow: 0 2px 8px rgba(248, 152, 32, 0.4);
+}
+
+/* Spring Boot Button - Green */
+.springboot-btn {
+    background: linear-gradient(135deg, #6db33f 0%, #4e8a3c 100%);
+    color: white;
+    border: 1px solid #6db33f;
+}
+
+.springboot-btn:hover {
+    background: linear-gradient(135deg, #4e8a3c 0%, #6db33f 100%);
+    box-shadow: 0 2px 8px rgba(109, 179, 63, 0.4);
+}
+
+/* HTML Button - Orange */
+.html-btn {
+    background: linear-gradient(135deg, #e34c26 0%, #d4380d 100%);
+    color: white;
+    border: 1px solid #e34c26;
+}
+
+.html-btn:hover {
+    background: linear-gradient(135deg, #d4380d 0%, #e34c26 100%);
+    box-shadow: 0 2px 8px rgba(227, 76, 38, 0.4);
+}
+
+/* CSS Button - Blue */
+.css-btn {
+    background: linear-gradient(135deg, #1572b6 0%, #0e5a8e 100%);
+    color: white;
+    border: 1px solid #1572b6;
+}
+
+.css-btn:hover {
+    background: linear-gradient(135deg, #0e5a8e 0%, #1572b6 100%);
+    box-shadow: 0 2px 8px rgba(21, 114, 182, 0.4);
+}
+
+/* JavaScript Button - Yellow */
+.js-btn {
+    background: linear-gradient(135deg, #f7df1e 0%, #d4c01a 100%);
+    color: #323330;
+    border: 1px solid #f7df1e;
+}
+
+.js-btn:hover {
+    background: linear-gradient(135deg, #d4c01a 0%, #f7df1e 100%);
+    box-shadow: 0 2px 8px rgba(247, 223, 30, 0.4);
+}
+
+/* MySQL Button - Blue */
+.mysql-btn {
+    background: linear-gradient(135deg, #4479a1 0%, #2962ff 100%);
+    color: white;
+    border: 1px solid #4479a1;
+}
+
+.mysql-btn:hover {
+    background: linear-gradient(135deg, #2962ff 0%, #4479a1 100%);
+    box-shadow: 0 2px 8px rgba(68, 121, 161, 0.4);
+}
+
+/* Hibernate Button - Brown */
+.hibernate-btn {
+    background: linear-gradient(135deg, #59666c 0%, #3e4651 100%);
+    color: white;
+    border: 1px solid #59666c;
+}
+
+.hibernate-btn:hover {
+    background: linear-gradient(135deg, #3e4651 0%, #59666c 100%);
+    box-shadow: 0 2px 8px rgba(89, 102, 108, 0.4);
+}
+
+/* JDBC Button - Light Blue */
+.jdbc-btn {
+    background: linear-gradient(135deg, #007396 0%, #004d6b 100%);
+    color: white;
+    border: 1px solid #007396;
+}
+
+.jdbc-btn:hover {
+    background: linear-gradient(135deg, #004d6b 0%, #007396 100%);
+    box-shadow: 0 2px 8px rgba(0, 115, 150, 0.4);
+}
+
+/* Project Skills - Small Laser Effect Badges */
+.project-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+    margin: 0.5rem 0;
+}
+
+.skill-badge {
+    padding: 0.2rem 0.5rem;
+    border-radius: 8px;
+    font-size: 0.6rem;
+    font-weight: 700;
+    font-family: 'JetBrains Mono', monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    position: relative;
+    overflow: hidden;
+    cursor: default;
+    transition: all 0.2s ease;
+    animation: laserPulse 2s ease-in-out infinite;
+}
+
+.skill-badge::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.6) 50%, transparent 70%);
+    animation: laserBeam 1.5s linear infinite;
+}
+
+.skill-badge::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at center, rgba(255,255,255,0.3) 0%, transparent 50%);
+    animation: laserGlow 1s ease-in-out infinite alternate;
+}
+
+/* React Skill - Cyan Laser */
+.react-skill {
+    background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+    color: white;
+    box-shadow: 0 0 8px rgba(0, 212, 255, 0.6);
+    border: 1px solid rgba(0, 212, 255, 0.8);
+}
+
+.react-skill:hover {
+    transform: translateY(-1px) scale(1.1);
+    box-shadow: 0 0 12px rgba(0, 212, 255, 0.8);
+}
+
+/* TypeScript Skill - Blue Laser */
+.typescript-skill {
+    background: linear-gradient(135deg, #007acc 0%, #005a9e 100%);
+    color: white;
+    box-shadow: 0 0 8px rgba(0, 122, 204, 0.6);
+    border: 1px solid rgba(0, 122, 204, 0.8);
+}
+
+.typescript-skill:hover {
+    transform: translateY(-1px) scale(1.1);
+    box-shadow: 0 0 12px rgba(0, 122, 204, 0.8);
+}
+
+/* Supabase Skill - Green Laser */
+.supabase-skill {
+    background: linear-gradient(135deg, #00ff88 0%, #00cc66 100%);
+    color: #000;
+    box-shadow: 0 0 8px rgba(0, 255, 136, 0.6);
+    border: 1px solid rgba(0, 255, 136, 0.8);
+}
+
+.supabase-skill:hover {
+    transform: translateY(-1px) scale(1.1);
+    box-shadow: 0 0 12px rgba(0, 255, 136, 0.8);
+}
+
+/* MySQL Skill - Orange Laser */
+.mysql-skill {
+    background: linear-gradient(135deg, #ff6600 0%, #cc5200 100%);
+    color: white;
+    box-shadow: 0 0 8px rgba(255, 102, 0, 0.6);
+    border: 1px solid rgba(255, 102, 0, 0.8);
+}
+
+.mysql-skill:hover {
+    transform: translateY(-1px) scale(1.1);
+    box-shadow: 0 0 12px rgba(255, 102, 0, 0.8);
+}
+
+/* Razorpay Skill - Purple Laser */
+.razorpay-skill {
+    background: linear-gradient(135deg, #9933ff 0%, #7b29cc 100%);
+    color: white;
+    box-shadow: 0 0 8px rgba(153, 51, 255, 0.6);
+    border: 1px solid rgba(153, 51, 255, 0.8);
+}
+
+.razorpay-skill:hover {
+    transform: translateY(-1px) scale(1.1);
+    box-shadow: 0 0 12px rgba(153, 51, 255, 0.8);
+}
+
+/* HTML Skill - Red Laser */
+.html-skill {
+    background: linear-gradient(135deg, #ff3366 0%, #cc0022 100%);
+    color: white;
+    box-shadow: 0 0 8px rgba(255, 51, 102, 0.6);
+    border: 1px solid rgba(255, 51, 102, 0.8);
+}
+
+.html-skill:hover {
+    transform: translateY(-1px) scale(1.1);
+    box-shadow: 0 0 12px rgba(255, 51, 102, 0.8);
+}
+
+/* CSS Skill - Yellow Laser */
+.css-skill {
+    background: linear-gradient(135deg, #ffcc00 0%, #cc9900 100%);
+    color: #000;
+    box-shadow: 0 0 8px rgba(255, 204, 0, 0.6);
+    border: 1px solid rgba(255, 204, 0, 0.8);
+}
+
+.css-skill:hover {
+    transform: translateY(-1px) scale(1.1);
+    box-shadow: 0 0 12px rgba(255, 204, 0, 0.8);
+}
+
+/* JavaScript Skill - Green Laser */
+.js-skill {
+    background: linear-gradient(135deg, #00ff00 0%, #00cc00 100%);
+    color: #000;
+    box-shadow: 0 0 8px rgba(0, 255, 0, 0.6);
+    border: 1px solid rgba(0, 255, 0, 0.8);
+}
+
+.js-skill:hover {
+    transform: translateY(-1px) scale(1.1);
+    box-shadow: 0 0 12px rgba(0, 255, 0, 0.8);
+}
+
+/* Java Skill - Orange Laser */
+.java-skill {
+    background: linear-gradient(135deg, #ff8800 0%, #cc6600 100%);
+    color: white;
+    box-shadow: 0 0 8px rgba(255, 136, 0, 0.6);
+    border: 1px solid rgba(255, 136, 0, 0.8);
+}
+
+.java-skill:hover {
+    transform: translateY(-1px) scale(1.1);
+    box-shadow: 0 0 12px rgba(255, 136, 0, 0.8);
+}
+
+/* Spring Boot Skill - Blue Laser */
+.springboot-skill {
+    background: linear-gradient(135deg, #0066ff 0%, #0044cc 100%);
+    color: white;
+    box-shadow: 0 0 8px rgba(0, 102, 255, 0.6);
+    border: 1px solid rgba(0, 102, 255, 0.8);
+}
+
+.springboot-skill:hover {
+    transform: translateY(-1px) scale(1.1);
+    box-shadow: 0 0 12px rgba(0, 102, 255, 0.8);
+}
+
+/* Hibernate Skill - Purple Laser */
+.hibernate-skill {
+    background: linear-gradient(135deg, #9966ff 0%, #6633cc 100%);
+    color: white;
+    box-shadow: 0 0 8px rgba(153, 102, 255, 0.6);
+    border: 1px solid rgba(153, 102, 255, 0.8);
+}
+
+.hibernate-skill:hover {
+    transform: translateY(-1px) scale(1.1);
+    box-shadow: 0 0 12px rgba(153, 102, 255, 0.8);
+}
+
+/* JDBC Skill - Teal Laser */
+.jdbc-skill {
+    background: linear-gradient(135deg, #00cccc 0%, #009999 100%);
+    color: #000;
+    box-shadow: 0 0 8px rgba(0, 204, 204, 0.6);
+    border: 1px solid rgba(0, 204, 204, 0.8);
+}
+
+.jdbc-skill:hover {
+    transform: translateY(-1px) scale(1.1);
+    box-shadow: 0 0 12px rgba(0, 204, 204, 0.8);
+}
+
+/* Laser Effect Animations */
+@keyframes laserPulse {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.85;
+        transform: scale(1.02);
+    }
+}
+
+@keyframes laserBeam {
+    0% {
+        transform: translateX(-100%) rotate(0deg);
+    }
+    100% {
+        transform: translateX(200%) rotate(360deg);
+    }
+}
+
+@keyframes laserGlow {
+    0% {
+        opacity: 0.3;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 0.7;
+        transform: scale(1.2);
+    }
+}
+
+/* Tech Stack Buttons */
+.tech-stack-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+
+.tech-btn {
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    font-family: 'JetBrains Mono', monospace;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tech-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* React Button - Blue */
+.react-btn {
+    background: linear-gradient(135deg, #61dafb 0%, #21759b 100%);
+    color: white;
+    border: 1px solid #61dafb;
+}
+
+.react-btn:hover {
+    background: linear-gradient(135deg, #21759b 0%, #61dafb 100%);
+    box-shadow: 0 4px 12px rgba(97, 218, 251, 0.4);
+}
+
+/* TypeScript Button - Blue */
+.typescript-btn {
+    background: linear-gradient(135deg, #3178c6 0%, #235a97 100%);
+    color: white;
+    border: 1px solid #3178c6;
+}
+
+.typescript-btn:hover {
+    background: linear-gradient(135deg, #235a97 0%, #3178c6 100%);
+    box-shadow: 0 4px 12px rgba(49, 120, 198, 0.4);
+}
+
+/* Supabase Button - Green */
+.supabase-btn {
+    background: linear-gradient(135deg, #3ecf8e 0%, #16a34a 100%);
+    color: white;
+    border: 1px solid #3ecf8e;
+}
+
+.supabase-btn:hover {
+    background: linear-gradient(135deg, #16a34a 0%, #3ecf8e 100%);
+    box-shadow: 0 4px 12px rgba(62, 207, 142, 0.4);
+}
+
+/* PostgreSQL Button - Dark Blue */
+.postgres-btn {
+    background: linear-gradient(135deg, #336791 0%, #2c5282 100%);
+    color: white;
+    border: 1px solid #336791;
+}
+
+.postgres-btn:hover {
+    background: linear-gradient(135deg, #2c5282 0%, #336791 100%);
+    box-shadow: 0 4px 12px rgba(51, 103, 145, 0.4);
 }
 
 /* ============================================
